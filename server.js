@@ -10,7 +10,8 @@ const productRoute = require("./routers/productRouter");
 // const userRoutes = require("./routers/userRoutes");
 const userrouter = require("./routes/userroutes.js");
 const categoryRoute = require("./routers/categoryRoute.js");
-const orderRouter = require("./routers/ordersRouter.js");
+const orderbillRouter = require("./routers/ordersbillRouter.js");
+const orderDetailRouter = require("./routers/orderDetailsRouter.js");
 
 app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: false }));
@@ -34,7 +35,8 @@ app.use("/api/category", categoryRoute);
 app.use("/api/products", productRoute);
 // app.use('/api/users', userRoutes);
 app.use("/api/user", userrouter);
-app.use("/api/order/", orderRouter);
+app.use("/api/billorder/", orderbillRouter);
+app.use("/api/orderdetail/", orderDetailRouter);
 
 app.listen(4000, () => {
   console.log("Backend is running.. 4000   mongodb://localhost:27017/food");
