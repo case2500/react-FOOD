@@ -51,3 +51,12 @@ db.getCollection("orderdetails").aggregate([
 
 
 db.getCollection("orderdetails").find({billorder_id:{$in:["658797a6439e955d5308b3d0"]}})
+
+
+echo "# backend_ecom_adddatabase" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/case2500/backend_ecom_adddatabase.git
+git push -u origin main
